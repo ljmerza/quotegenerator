@@ -47,25 +47,14 @@ gulp.task('javascript', () => {
 
 // Sass tasks
 gulp.task('sass', () => {
-    let sassStream = gulp.src([
-        "./public/sass/*.s*ss"
-    ])
-    .pipe(sass({
-    	style: 'compressed'
-    },
-    function (err) {
-        return console.log(err)
-    }))
-
-    let cssStream = gulp.src('./public/sass/*.css')
-        
-    return merge(sassStream, cssStream)
+    return gulp.src("./public/sass/*.s*ss")
+    .pipe(sass({style: 'compressed'}))        
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(concat('style.css'))
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(cssnano())
-    .pipe(sourcemaps.write('.'))
+    //.pipe(autoprefixer('last 2 versions'))
+    //.pipe(cssnano())
+    //.pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./public/dist/'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(notify({ message: 'Sass build done.' }))

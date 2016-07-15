@@ -11,5 +11,11 @@ app.use(bodyParser.json())
 
 app.use(express.static('./public/dist'))
 
+
+let ext = require('./server')
+app.use('/api/', ext.app)
+
+
+
 app.listen(3000)
 console.log('node server listening on port 3000')
