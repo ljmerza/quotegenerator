@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Quote Generator</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,41 +21,42 @@
 
 		<!-- quote card -->
 		<div class="col s12 m8">
-			<div class="card z-depth-1">
+			<div class="card">
 				<div class="card-body">
 					<div id='quoteInput'></div>
 					<div id='quoteAuthor'></div>
 					<div id='error'></div>
 				</div>
+				<div class='clear'>&nbsp;</div>
 			</div>
 		</div>
 
 		<!-- quote api selection card -->
 		<div class="col s12 m4">
-			<div class="card z-depth-1">
+			<div class="card">
 				<div class="card-body">
 
-					<button type="button" class="btn" id='generate'>Generate new Quote</button>
+					<a class="btn" id='generate'>Generate new Quote</a>
 					<a class="btn" id='tweet' target="_blank">Tweet Quote</a>
 
 					<!-- famous api -->
 					<div class='radio-container'>
-						<input type="radio" class='radio' id='famous' name="radio" value="famous" checked> 
+						<input type="radio" class='with-gap' id='famous' name="radio" value="famous" checked> 
 						<label for="famous">Famous Quotes</label>
 					</div>
 					<!-- game of thrones api -->
 					<div class='radio-container'>
-						<input type="radio" class='radio' id='got' name="radio" value="got">
+						<input type="radio" class='with-gap' id='got' name="radio" value="got">
 						<label for="got">Game of Thrones Quotes</label>
 					</div>
 					<!-- chuck norris api -->
 					<div class='radio-container'>
-						<input type="radio" class='radio' id='cn' name="radio" value="cn">
+						<input type="radio" class='with-gap' id='cn' name="radio" value="cn">
 						<label for="cn">Chuck Norris Quotes</label>
 					</div>
 					<!-- computer science api -->
 					<div class='radio-container'>
-						<input type="radio" class='radio' id='compsci' name="radio" value="compsci">
+						<input type="radio" class='with-gap' id='compsci' name="radio" value="compsci">
 						<label for="compsci">Computer Science Quotes</label>
 					</div>
 					<div class='clear'>&nbsp;</div>
@@ -64,7 +66,7 @@
 
 
 	</div><!-- end of container -->
-
+	
 	<script src="script.js"></script>
 </body>
 </html>
