@@ -6,7 +6,9 @@
  */
 var request = new XMLHttpRequest()
 var data
-var url = 'api/famous'
+
+var url = '../api/quotegen/famous'
+
 var quoteEl = document.getElementById("quoteInput")
 var authorEl = document.getElementById("quoteAuthor")
 var tweetBtn = document.getElementById("tweet")
@@ -60,7 +62,7 @@ function error() {
  * to change the xhr url and onload function to extract the quote data
  */
 document.getElementById("famous").addEventListener("click", function (e) {
-	url = 'api/famous'
+	url = '../api/quotegen/famous'
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
 			var data = JSON.parse(request.responseText)
@@ -77,7 +79,7 @@ document.getElementById("famous").addEventListener("click", function (e) {
 	}
 })
 document.getElementById("got").addEventListener("click", function (e) {
-	url = 'api/got'
+	url = '../api/quotegen/got'
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
 			var data = JSON.parse(request.responseText)
@@ -94,7 +96,7 @@ document.getElementById("got").addEventListener("click", function (e) {
 	}
 })
 document.getElementById("compsci").addEventListener("click", function (e) {
-	url = 'api/compsci'
+	url = '../api/quotegen/compsci'
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
 			var data = JSON.parse(request.responseText)
@@ -111,7 +113,7 @@ document.getElementById("compsci").addEventListener("click", function (e) {
 	}
 })
 document.getElementById("cn").addEventListener("click", function (e) {
-	url = 'api/cn'
+	url = '../api/quotegen/cn'
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400) {
 			var data = JSON.parse(request.responseText)

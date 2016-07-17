@@ -22,7 +22,7 @@ app.get('/famous', function (req, res, next) {
   let options = {
     url: "https://andruxnet-random-famous-quotes.p.mashape.com/cat=famous",
     headers: {
-      'X-Mashape-Key': '',
+      'X-Mashape-Key': 'YUMpis6bbJmshWRlcAirUlH1HuKxp1fd6xUjsnwjqY1rwe3CKj',
       'Accept': "application/json",
       "Content-Type": "application/x-www-form-urlencoded"
     }

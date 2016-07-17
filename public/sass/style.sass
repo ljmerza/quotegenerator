@@ -5,11 +5,20 @@ body
 .container-fluid
 	margin: 0 10% 0 10%
 
+
+
 h1
 	text-align: center
 	margin-top: 50px
 	padding: 1em
 	font-size: 4em
+
+
+
+.flexer
+	clear: both
+	display: flex
+	flex-flow: row wrap
 
 .card
 	position: relative
@@ -20,6 +29,26 @@ h1
 .card-header
 	padding: 0em
 	min-height: 0px
+.card-1
+	width: 66.667%
+	order: 1
+.card-2
+	width: 33.333%
+	order: 2
+
+
+@media screen and (max-width: 992px)
+	.card
+		min-height: 0px
+	h1
+		font-size: 3em
+	.card-1
+		width: 100%
+		order: 2
+	.card-2
+		width: 100%
+		order: 1
+
 
 
 .btn
@@ -32,20 +61,32 @@ h1
 .btn:hover
 	background-color: #D0D018
 	border-color: #adadad
+
+
+
+
+
 [type="radio"]:not(:checked)+label, [type="radio"]:checked+label
 	margin-bottom: 10px
 	font-size: 1.3em
 
 [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after
 	border: solid 2px #817A00
+
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after
 	background-color: #817A00
+
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after
 	border: 2px solid #817A00
 
+
 .radio-container:first-of-type
 	margin-top: 50px
-
+.radio-container
+	clear: both
+.clear
+	position: relative
+	margin-bottom: 5em
 
 
 
@@ -61,10 +102,7 @@ h1
 	font-size: 1.5em
 
 
-.radio-container
-	clear: both
 
 
-.clear
-	position: relative
-	margin-bottom: 5em
+
+
