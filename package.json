@@ -1,7 +1,7 @@
 {
   "name": "",
   "version": "1.0.0",
-  "description": "",
+  "description": "gnerate a chuck norris, programming, or game of thrones wutoes and share on twitter",
   "main": "server.js",
   "scripts": {
     "start": "node dev-server.js"
