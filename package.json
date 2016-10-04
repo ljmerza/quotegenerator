@@ -1,7 +1,7 @@
 {
   "name": "",
   "version": "1.0.0",
-  "description": "gnerate a chuck norris, programming, or game of thrones wutoes and share on twitter",
+  "description": "generate a chuck norris, programming, or game of thrones wutoes and share on twitter",
   "main": "server.js",
   "scripts": {
     "start": "node dev-server.js"
